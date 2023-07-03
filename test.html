@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Testing</title>
+    <link rel="icon" type="image/x-icon" href="img/ficon.png">
+    <style>
+        div {
+            font-size: 30px;
+            color: white;
+            background-color: brown;
+            text-decoration: none;
+            width: 80%;
+            text-align: center;
+            height: 40px;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <script src="js/songData.js"></script>
+    <script>
+        function populateLinks(){
+            var keys = Object.keys(_albums);
+            for(var i = 0; i < keys.length; i++){
+                var container = document.createElement("div");
+                var id = keys[i];
+                var link = document.createElement("a");
+                link.href = "/index.html?id=" + id;
+                link.target = "_blank";
+                link.innerHTML = id;
+                document.body.appendChild(container);
+                container.appendChild(link);
+            }
+        }
+        populateLinks();
+    </script>
+</body>
+</html>
