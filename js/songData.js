@@ -4,6 +4,7 @@ const _albums = {
         artist: "Vaundy",
         audio: "audio/Fukakouryoku.mp3",
         coverArt: "cover/Fukakouryoku.jpeg",
+        background: "img/bg/bg-fuka.png"
     },
     "securitymeeting": {
         name: "Security Meeting",

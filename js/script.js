@@ -161,6 +161,7 @@ $(function () {
 			currAlbum = _albums[songId].name;
 			currTrackName = _albums[songId].artist;
 			currArtworkUrl = _albums[songId].coverArt;
+			bgArtworkUrl = _albums[songId].background;
 
 			audio.src = _albums[songId].audio;
 
@@ -170,11 +171,9 @@ $(function () {
 
 			albumName.text(currAlbum);
 			trackName.text(currTrackName);
-
-			bgArtworkUrl = currArtworkUrl;
-
-			albumArt.find("img.active").attr("src", bgArtworkUrl);
+			
 			bgArtwork.css({ "background-image": "url(" + bgArtworkUrl + ")" });
+			albumArt.find("img.active").attr("src", currArtworkUrl);
 	}
 
 	function initPlayer() {
